@@ -1,0 +1,675 @@
+{
+	"info": {
+		"_postman_id": "2df53d1c-f559-4475-8829-3000d3ed6cdd",
+		"name": "0 Rails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25061002"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "asd61@dasd.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "dksajdlkasjkld",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "asd61@dasd.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ali",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nickname",
+									"value": "dksajdlkasjkld",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/sign_in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/demo/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"demo",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/admin_auth/?email=asd61@dasd.com&password=password&name=ali&password_confirmation=password&nickname=dksajdlkasjkld",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"admin_auth",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "asd61@dasd.com"
+								},
+								{
+									"key": "password",
+									"value": "password"
+								},
+								{
+									"key": "name",
+									"value": "ali"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password"
+								},
+								{
+									"key": "nickname",
+									"value": "dksajdlkasjkld"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "asd61@dasd.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ali",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nickname",
+									"value": "dksajdlkasjkld",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/admin_auth/sign_in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"admin_auth",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/demo/admins",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"demo",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/posts/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJBWGdNNGlCMTZ2Zlc1RlR1UENwa1h3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6ImNhV3U0SGd4bmdYRUUwQzJpMXBnOVEiLCJleHBpcnkiOiIxNjczODIyNTY0IiwidWlkIjoiYXNkNjFAZGFzZC5jb20ifQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "any description"
+								},
+								{
+									"key": "company_name",
+									"value": "mawdoo3"
+								},
+								{
+									"key": "title",
+									"value": "zenhr"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJuQV9wYlFHdWxRWklvdG5SLWN1UVB3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6ImtPRmJNSEp3SU5hd0JUWkM4YXZ3TFEiLCJleHBpcnkiOiIxNjczODIyMTg4IiwidWlkIjoiYXNkNjFAZGFzZC5jb20ifQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "any description"
+								},
+								{
+									"key": "company_name",
+									"value": "mawdoo3d65d4as654d65as4d6s"
+								},
+								{
+									"key": "title",
+									"value": "zenhr"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/posts/100",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/posts/100",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "applicants",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/applicants",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"applicants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/applicants/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"applicants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJ1cmY5YVRaZXNhUmpPZjVqdWt1QnlBIiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6Im9jUmhHMXZSZ1Y4YWZRZG5HdzVvc2ciLCJleHBpcnkiOiIxNjczODIzNjYxIiwidWlkIjoiYXNkNjFAZGFzZC5jb20ifQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "7"
+								},
+								{
+									"key": "attachment_url",
+									"value": "dadsa.com"
+								},
+								{
+									"key": "title",
+									"value": "zenhr",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/applicants",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"applicants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/posts/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seen",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/applicants/4/seen",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"applicants",
+								"4",
+								"seen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "user_token",
+			"value": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJIU0Uyb0xoQ3ZyNzFQbks2WkNDemN3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IjhnZUNfZ28tczNreFdVaVhuSHBNbkEiLCJleHBpcnkiOiIxNjczNDMxNTQ4IiwidWlkIjoiYXNkNjFAZGFzZC5jb20ifQ=="
+		},
+		{
+			"key": "admin_token",
+			"value": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJJdmxoWGxhT0tqanBGbktYTC1fMVN3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IkhVMmprUGhtZlFzMnl0OElhc09vQnciLCJleHBpcnkiOiIxNjczNDQ5OTI4IiwidWlkIjoiYXNkNjFAZGFzZC5jb20ifQ=="
+		}
+	]
+}
